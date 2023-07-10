@@ -1,1 +1,1 @@
-export {FruitCard} from "./FruitCard";
+export { FruitCard } from "./FruitCard";
