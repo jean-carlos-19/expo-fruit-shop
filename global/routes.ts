@@ -1,6 +1,6 @@
 type RootStackParamList = {
   Home: undefined;
-  Product:{
+  Product: {
     color: any;
     desc: string;
     image: number;
@@ -9,6 +9,6 @@ type RootStackParamList = {
     shadow: string;
     stars: number;
   };
-  Cart:undefined
+  Cart: undefined;
 };
 export { RootStackParamList };

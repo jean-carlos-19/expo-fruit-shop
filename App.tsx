@@ -15,16 +15,16 @@ export default function App() {
           name="Home"
           component={Home}
         />
-        <Stack.Screen 
+        <Stack.Screen
           options={{
-            headerShown:false
+            headerShown: false,
           }}
           name="Product"
           component={Product}
         />
-        <Stack.Screen 
+        <Stack.Screen
           options={{
-            headerShown:false
+            headerShown: false,
           }}
           name="Cart"
           component={Cart}

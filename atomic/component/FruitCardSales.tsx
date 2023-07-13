@@ -20,9 +20,20 @@ const FruitCardSales = (props: fruit_card_sales) => {
 
   return (
     <View className="mr-6">
-      <TouchableOpacity 
-      onPress={()=> navigation.navigate("Product", {color, desc, image, name, price, shadow, stars})}
-      className="flex-row justify-center shadow-lg z-20">
+      <TouchableOpacity
+        onPress={() =>
+          navigation.navigate("Product", {
+            color,
+            desc,
+            image,
+            name,
+            price,
+            shadow,
+            stars,
+          })
+        }
+        className="flex-row justify-center shadow-lg z-20"
+      >
         <Image
           source={image}
           style={{
@@ -44,7 +55,6 @@ const FruitCardSales = (props: fruit_card_sales) => {
           $ {price}
         </Text>
       </View>
- 
     </View>
   );
 };

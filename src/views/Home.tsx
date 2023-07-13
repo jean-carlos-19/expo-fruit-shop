@@ -29,7 +29,10 @@ const Home = () => {
       {/* top Bar */}
       <View className="mx-5 flex-row justify-between items-center">
         <Bars3BottomLeftIcon size={30} color={"black"} />
-        <TouchableOpacity onPress={()=>navigation.navigate("Cart")} className="p-2 rounded-xl bg-orange-100">
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Cart")}
+          className="p-2 rounded-xl bg-orange-100"
+        >
           <ShoppingCartIcon size={25} color={"orange"} />
         </TouchableOpacity>
       </View>
