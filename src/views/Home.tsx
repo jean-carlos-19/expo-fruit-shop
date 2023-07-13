@@ -19,7 +19,10 @@ const Home = () => {
   const [activeCategory, setActiveCategory] = useState("Oranges");
 
   return (
-    <View style={{ height: Dimensions.get("screen").height }} className="flex-1 bg-orange-50">
+    <View
+      style={{ height: Dimensions.get("screen").height }}
+      className="flex-1 bg-orange-50"
+    >
       <StatusBar backgroundColor={"rgb(255,247,237)"} />
       {/* top Bar */}
       <View className="mx-5 flex-row justify-between items-center">
@@ -90,12 +93,11 @@ const Home = () => {
           showsHorizontalScrollIndicator={false}
           style={{ overflow: "visible" }}
         >
-          {
-            [...featuredFruits].reverse().map((fruit, i: number) => <FruitCardSales fruit={fruit} key={i} />)
-          }
+          {[...featuredFruits].reverse().map((fruit, i: number) => (
+            <FruitCardSales fruit={fruit} key={i} />
+          ))}
         </ScrollView>
       </View>
-
     </View>
   );
 };
