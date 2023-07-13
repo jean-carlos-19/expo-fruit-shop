@@ -55,6 +55,7 @@ const Product = (props: any) => {
                 <View className="flex-row justify-between items-center">
                     <Text className="text-3xl">$ {price} </Text>
                     <TouchableOpacity
+                        onPress={()=>navigation.navigate("Cart")} 
                         className='text-3xl p-3 ml-6 flex-1 rounded-xl'
                         style={{
                             backgroundColor:shadow,
