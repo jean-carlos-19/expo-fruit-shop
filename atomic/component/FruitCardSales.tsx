@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 
@@ -15,9 +16,13 @@ interface fruit_card_sales {
 const FruitCardSales = (props: fruit_card_sales) => {
   const { fruit } = props;
   const { color, desc, image, name, price, shadow, stars } = fruit;
+  const navigation = useNavigation();
+
   return (
     <View className="mr-6">
-      <TouchableOpacity className="flex-row justify-center shadow-lg z-20">
+      <TouchableOpacity 
+      onPress={()=> navigation.navigate("Product", {color, desc, image, name, price, shadow, stars})}
+      className="flex-row justify-center shadow-lg z-20">
         <Image
           source={image}
           style={{
@@ -39,6 +44,7 @@ const FruitCardSales = (props: fruit_card_sales) => {
           $ {price}
         </Text>
       </View>
+ 
     </View>
   );
 };
