@@ -5,6 +5,7 @@ import {
   Text,
   ScrollView,
   StatusBar,
+  Dimensions,
 } from "react-native";
 import {
   Bars3BottomLeftIcon,
@@ -12,13 +13,13 @@ import {
 } from "react-native-heroicons/outline";
 import { theme } from "@/global/theme";
 import { categories, featuredFruits } from "@/global/data";
-import { FruitCard } from "@/atomic/component";
+import { FruitCard, FruitCardSales } from "@/atomic/component";
 
 const Home = () => {
   const [activeCategory, setActiveCategory] = useState("Oranges");
 
   return (
-    <View className="flex-1 bg-orange-50">
+    <View style={{ height: Dimensions.get("screen").height }} className="flex-1 bg-orange-50">
       <StatusBar backgroundColor={"rgb(255,247,237)"} />
       {/* top Bar */}
       <View className="mx-5 flex-row justify-between items-center">
@@ -78,6 +79,23 @@ const Home = () => {
           ))}
         </ScrollView>
       </View>
+
+      {/* hot sales */}
+      <View className="mt-8 pl-5 space-y-1">
+        <Text style={{ color: theme.text }} className="text-xl font-bold">
+          Hot sales
+        </Text>
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          style={{ overflow: "visible" }}
+        >
+          {
+            [...featuredFruits].reverse().map((fruit, i: number) => <FruitCardSales fruit={fruit} key={i} />)
+          }
+        </ScrollView>
+      </View>
+
     </View>
   );
 };
