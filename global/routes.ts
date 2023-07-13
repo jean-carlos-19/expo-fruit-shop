@@ -9,5 +9,6 @@ type RootStackParamList = {
     shadow: string;
     stars: number;
   };
+  Cart:undefined
 };
 export { RootStackParamList };
