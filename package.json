@@ -8,7 +8,9 @@
     "Tailwind",
     "NativeWind",
     "Typescript",
-    "YupJs"
+    "YupJs",
+   "ReactNavigation",
+   "Heroicons"
   ],
   "homepage": "https://www.piguavesof.com",
   "demo": "",
